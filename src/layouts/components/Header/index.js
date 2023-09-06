@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Styles from "./styles";
 
 const Header = () => {
@@ -13,7 +14,7 @@ const Header = () => {
         {navList.map((item, index) => {
           return (
             <Styles.Nav key={index + "nav"}>
-              <a href={item.url}>{item.title}</a>
+              <Link to={item.url}>{item.title}</Link>
             </Styles.Nav>
           );
         })}

@@ -1,9 +1,12 @@
+import { useNavigate } from "react-router-dom";
 import { Button } from "../../components/Buttons/Button";
 import Styles from "./styles";
 
 const Home = () => {
+  const navigate = useNavigate();
+
   const handleClick = (link) => {
-    window.location.href = link;
+    navigate(link);
   };
   return (
     <Styles.Container>

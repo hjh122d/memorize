@@ -1,8 +1,24 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  width: 1000px;
+  width: 80%;
+  max-width: 1000px;
   margin: 0 auto;
+
+  textarea {
+    width: 60%;
+    height: 50px;
+    margin-top: 10px;
+  }
+
+  div Button {
+    margin-top: -20px;
+    margin-left: 10px;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const listTb = styled.table`

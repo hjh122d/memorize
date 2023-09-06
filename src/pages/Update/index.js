@@ -13,7 +13,7 @@ const Update = () => {
   const handleDelete = (number) => {
     const newData = list.filter((item) => item.number !== number);
     setList(newData);
-    console.log(newData);
+    //console.log(newData);
   };
 
   const handleInputChange = (e) => {
@@ -38,12 +38,19 @@ const Update = () => {
   return (
     <Styles.Container>
       <div>
-        단어 : <input type="text" name="keyword" onChange={handleInputChange} />{" "}
-        설명 :{" "}
+        단어 :{" "}
         <input
           type="text"
+          name="keyword"
+          value={inputs.keyword}
+          onChange={handleInputChange}
+        />{" "}
+        <br />
+        설명 :{" "}
+        <textarea
+          type="text"
+          value={inputs.description}
           name="description"
-          size="80"
           onChange={handleInputChange}
         />
         <Button onClick={handleInsert}>추가</Button>

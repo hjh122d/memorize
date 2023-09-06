@@ -51,7 +51,7 @@ const Quiz = () => {
   };
 
   const closeModal = () => {
-    console.log(quizList);
+    //console.log(quizList);
     setModalOpen(false);
     setInput("");
     if (quizList.length > 0) {
@@ -60,18 +60,18 @@ const Quiz = () => {
       setIsQuiz(false);
     }
     inputRef.current.focus();
-    console.log(isQuiz);
+    //console.log(isQuiz);
   };
 
   const handleClick = () => {
     setModalOpen(true);
     if (input === list[pickNumber].keyword) {
-      console.log("정답입니다.");
+      //console.log("정답입니다.");
       setUnitResult("O");
       setResult((prev) => ({ ...prev, ...prev.success.push(pickNumber) }));
       setAnswer("");
     } else {
-      console.log("오답입니다.");
+      //console.log("오답입니다.");
       setUnitResult("X");
       setResult((prev) => ({ ...prev, ...prev.failure.push(pickNumber) }));
       setAnswer("정답: " + list[pickNumber].keyword);

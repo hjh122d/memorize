@@ -1,12 +1,19 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  width: 600px;
+  width: 50%;
+  max-width: 600px;
   margin: 0 auto;
 
   > div {
     border: 2px solid #dadada;
     padding: 20px;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    > div {
+      padding: 10px;
+    }
   }
 `;
 

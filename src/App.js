@@ -9,10 +9,10 @@ import Update from "./pages/Update";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route path="/" element={<Home />} />
+        <Route element={<Layout />}>
+          <Route exact path="/" element={<Home />} />
           <Route path="/list" element={<List />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/update" element={<Update />} />
